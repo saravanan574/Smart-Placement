@@ -97,7 +97,7 @@ const opportunitySchema = new mongoose.Schema(
     isRecommended: { type: Boolean, index: true },
     applySuggestion: {
       type: String,
-      enum: ['apply', 'maybe', 'skip', null],
+      enum: ['apply', 'maybe', 'skip','meets all', null],
       default: null
     },
     
