@@ -28,7 +28,7 @@ import MyApplications from './pages/MyApplications'
 import Deadlines from './pages/Deadlines'
 import Community from './pages/Community'
 import Profile from './pages/Profile'
-
+import Setting from './pages/Settings'
 // Opportunity detail page — full extracted mail view
 import OpportunityDetail from './pages/OpportunityDetail'
 
@@ -264,7 +264,16 @@ const AppInner = () => {
             </ProtectedRoute>
           }
         />
-
+      <Route
+          path="/settings"
+          element={
+            <ProtectedRoute>
+              <DashboardLayout>
+                <Setting />
+              </DashboardLayout>
+            </ProtectedRoute>
+          }
+        />
         <Route path="*" element={<NotFound />} />
 
       </Routes>
